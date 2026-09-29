@@ -1,163 +1,112 @@
-
+/* --- GLOBAL STYLES --- */
 body {
-    background-color: #000000; /* Black background */
-    color: #ffffff;            /* White text */
+    background-color: #000000;
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-a {
-    color: #ff3333; /* A nice bright red */
-    text-decoration: none; /* Removes the default underline */
-}
-
-a:hover {
-    color: #ffffff; 
-    text-decoration: underline; 
-}
-nav {
-    position: absolute;
-    top: 20px;
-    right: 40px; 
-    width: 350px;
-    background-color: #642222; 
-    border: 2px solid #ec7373;
-    z-index: 999; 
-    padding: 15px 0; 
-    border-radius: 10px;
-}
-
-nav a {
-    margin-left: 20px; 
-}
-
-
-.project { 
-    /* 1. Paints the box dark grey so it stands out from the black background */
-    background-color: #1a1a1a; 
-    
-    /* 2. Adds a red border around the box */
-    border: 2px solid #ff3333; 
-    
-    /* 3. Rounds the corners of the box */
-    border-radius: 10px;       
-    
-    /* 4. Adds space INSIDE the box so the text doesn't touch the red border */
-    padding: 20px;             
-    
-    /* 5. Adds space OUTSIDE the box so the two projects don't touch each other */
-    margin-bottom: 20px;
-
-    width: 700px;       
-}
-section#about {
-    position: absolute;
-    left: 40px;
-    top: 300px;
-}
-main section {
-    display: none; /* Hide them all by default */
-    position: absolute;
-    top: 180px;
-    left: 40px;
-}
-#home {
-    display: block; 
-    width: 90%
-}
- #home h1{
+.app-container {
+    max-width: 800px;
+    width: 100%;
     text-align: center;
-    padding-top: 20px;
-    top : -100px; 
-}
-#home h2 {
-    position: absolute;
-    left: 650px; 
-    top: 300px; 
-    font-size: 40px; 
+    margin-top: 40px;
 }
 
-#home p {
-    position: absolute;
-    left: 650px; 
-    top: 370px; 
-    font-size: 20px;
+/* --- TYPOGRAPHY & IMAGES --- */
+h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
+    color: #ffffff;
 }
-#home img {
-    position: relative;
-    top: 50px; 
-    border-radius: 15px;
+
+.developer {
+    font-size: 18px;
+    color: #ec7373;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 40px;
 }
+
+.app-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    border: 3px solid #ff3333;
+    object-fit: cover;
+}
+
+/* --- SLIDER STYLES --- */
+.slider-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.screenshot {
+    display: none; /* Hides all images by default */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.active-slide {
+    display: inline-block; 
+}
+
+.slider-controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* --- INFO CARDS --- */
+.info-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.info-card h3 {
+    margin-top: 0;
+    color: #ff3333;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.info-card p {
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Highlight the transparency section for Google Reviewers */
+.transparency-card {
+    border-left: 4px solid #ff3333;
+}
+
+/* --- BUTTONS --- */
 .btn {
     display: inline-block;
     background-color: #ff3333;
-    color: #ffffff; 
-    padding: 10px 20px; 
-    text-decoration: none; 
-    border-radius: 5px; 
-    margin-top: 10px; 
-    font-weight: bold;
-}
-.btn:hover {
-    background-color: #cc0000; /* A slightly darker red for the hover effect */
-}
-
-#bug-space-invasion a{ /* BUGGGG GAME SCREEN STUFFFF*/
-    position: absolute;
-    top: -40px;
-    left: 40px;
-}
-.back-btn {
-    position: absolute;
-    top: 20px;
-    left: 40px;
-}
-.bug-icon {
-    position: absolute;
-    left: 40px;
-    top: 120px;
-    width: 350px;
-    border-radius: 15px;
-}
-#projects{
-    position: absolute;
-    height: 100%;
-}
-#bug-space-invasion{
-    position: absolute;
-    height: 100%;
-}
-#bug-space-invasion h2{
-    text-align: center;
-    margin-top: 20px;
-}
-.gallery-container {
-    position: absolute;
-    left: 450px; 
-    top: 100px;
-    width: 400px; 
-    text-align: center;
-}
-
-/* Hides ALL images by default and sets their size */
-.gallery-img {
-    display: none; 
-    width: 100%; 
-    height: 600px; 
-    object-fit: cover; /* Prevents the images from looking squished */
-    border-radius: 15px;
-    border: 2px solid #ff3333;
-}
-
-/* ONLY the image with this class will show up! */
-.active-img {
-    display: block; 
-}
-
-/* Adds some space above the left/right buttons */
-.gallery-controls {
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
     margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s;
 }
-.game-desc {
-    margin-top: 20px;
+
+.btn:hover {
+    background-color: #cc0000;
 }

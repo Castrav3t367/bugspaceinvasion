@@ -3,135 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>site</title>
-
+    <title>Bug Space Invasion</title>
     <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <header>
-        <nav>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="#home">Home</a>
-        </nav>
-    </header>
+    <main class="app-container">
+        <!-- ADD YOUR 512x512 APP ICON HERE -->
+        <img class="app-icon" src="images/BugSpaceInvasion.png" alt="Bug Space Invasion Logo">
+        
+        <h1>Bug Space Invasion</h1>
+        <h2 class="developer">by JNStudio</h2>
 
-    <main>
-
-
-
-
-        <section id="projects">
-            <h2>My Projects</h2>
-
-            <div class="project">
-                <h3>Water Tracker App</h3>
-                <p>A Flutter application that helps users track their daily water intake.Still in development.But idk if i will post it.</p>
-            </div>
-
-            <div class="project">
-                <h3>2D Game RTS IN PROGRESS</h3>
-                <p>A 2D game I'm developing with Godot RTS style for pc and phones.</p>
-                <p>And 1 just for mobile! simple tower defence stuff </p>
-            </div>
-
-            <div class="project">
-                <h3>Portfolio Website</h3>
-                <p>This website you're currently on! Built with HTML, CSS, and JavaScript.</p>
-            </div>
-
-            <div class="project">
-                <h3>BUG SPACE INVASION</h3>
-                <p>Tower defence game Soon Out!!</p>
-                <a onclick="showSection('bug-space-invasion')" class="btn" style="cursor: pointer;">View Game Details</a>
-            </div>
-
+        <section class="info-card">
+            <h3>About the Game</h3>
+            <p>
+                Bug Space Invasion is a 2D Sci-Fi Tower Defense game. Players must strategically manage their battery power, build defensive turrets, and utilize unique weapons and tools to survive endless waves of hostile alien bugs across different planets.
+            </p>
+            
+       <!-- IMAGE SLIDER -->
+            <div class="slider-container">
+                <img class="screenshot active-slide" src="images/levels.PNG" alt="Bug Space Invasion Gameplay">
+                <img class="screenshot" src="images/UPGRADE3.png" alt="Bug Space Invasion Gameplay">
+                <img class="screenshot" src="images/UPGRADE4.png" alt="Bug Space Invasion Gameplay">
+                <img class="screenshot" src="images/UPGRADE6.png" alt="Bug Space Invasion Gameplay">
+                <div class="slider-controls">
+                    <button class="btn" onclick="changeSlide(-1)">&#10094; Prev</button>
+                    <button class="btn" onclick="changeSlide(1)">Next &#10095;</button>
+                </div>
             </div>
         </section>
-        
 
-
-
-
-        <section id="home"style="top: -20px;">
-              <h1>Welcome to my site</h1>
-        <img class="main-image"
-        src="images/icon.png" 
-        alt="Just a picture random XD" 
-        width="500" height="700">
-           <h2>Hi, I'm Niko!</h2>
-           <p>Welcome to my corner of the internet. </p>
-           <p>I like gamedev is kinda fun also app development!</p>
-         </section>
-
-
-
-        <section id="about" style="top: 100px;">
-            <h2>About Me</h2>
+        <section class="info-card transparency-card">
+            <h3>Why We Request User Data</h3>
             <p>
-                I developed skills in godot and programming!
-                I'm a Computer Science student building applications,
-                games and websites.
-                I like gaming and coding is cool how this random lines of words can do actualy stuff!
+                Bug Space Invasion requests access to your <strong>Google Play Games Services</strong> and hidden <strong>Google Drive App Data</strong> for one specific feature: <strong>Cloud Saves</strong>. 
+            </p>
+            <p>
+                Authenticating allows the game to securely backup your unlocked levels, weapons, and crystal currency to Google's servers. This ensures you never lose your progress and can synchronize your game across multiple Android devices. We do not have access to your personal Google Drive files, only the specific hidden save file created by this game.
             </p>
         </section>
 
-
-
-
-
-
-
-        <section id="contact" style="top: 100px;">
-            <h3>No contact for now until it's done
-                If u know me just text me on whatapp XD!
-            </h3>
+        <section class="info-card">
+            <h3>Privacy Policy</h3>
+            <p>We take your privacy seriously. Please review our full privacy policy to understand how your data is handled.</p>
+            
+            <a href="https://docs.google.com/document/d/1Q8oTv0jAr53w-vjgtZtuZutdx8mkg6uKChpKaAUAhjs/edit?usp=sharing" class="btn" target="_blank">Read Privacy Policy</a>
         </section>
-
-
-
-
-
-
-        
-<section id="bug-space-invasion">
-    <a onclick="showSection('projects')" class="btn back-btn" style="cursor: pointer;">Back to Projects</a>
-    <h2>Bug Space Invasion</h2>
-    <img class="bug-icon" src="images/BUG SPACE INVASION.png" alt="Icon">
-    <div class="gallery-container">
-        <h3>ScreenShots</h3>
-        <div class="gallery-images">
-            <img src="images/defend.PNG" class="gallery-img active-img" alt="Pic 1"> 
-            <img src="images/upgrade.PNG" class="gallery-img" alt="Pic 2">
-            <img src="images/levels.PNG" class="gallery-img" alt="Pic 3">
-            <img src="images/trophy room.PNG" class="gallery-img" alt="Pic 4">
-            <img src="images/mainmenu.PNG" class="gallery-img" alt="Pic 5">
-        </div>
-        <div class="gallery-controls">
-            <button onclick="changeImage(-1)" class="btn" style="cursor: pointer;">&lt; Left</button>
-            <button onclick="changeImage(1)" class="btn" style="cursor: pointer;">Right &gt;</button>
-        </div>
-        <p class="game-desc">first version kinda boring,up UI bad,no win lose animation,to hard from mars!</p>
-        <p class="game-desc">2nd version i add shop,win/lose animation,crystal system,wepons,tools,new up UI,Battery,new main menu,godfinger!</p>
-    </div>
-</section>
-
-
-
-
-
-
     </main>
-
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
